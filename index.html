@@ -214,7 +214,7 @@
                 wish: "Official notice: Age is just a number. In your case, it is completely unverified and irrelevant. Enjoy your youth-filled day and don't let anyone tell you otherwise! Calorie intake today is legally irrelevant. Go on, devour that cake, chase it with ice cream, and call it research— for science! Have a deliciously awesome birthday!",
                 memory: "All the time spent was wonderful",
                 oneWord: "Intelligent",
-                photo: "",
+                photo: './arun-renu.jpg',
                 firstMeet: "on my wedding day",
                 futureWish: "Solo bike ride from Kashmir to Kanyakumari ;)"
             },
@@ -226,7 +226,7 @@
                 wish: "Happy Birthday, Aishu !!",
                 memory: "I'll never forget the moment you casually mentioned wanting to buy a Royal Enfield. I was genuinely surprised and super impressed !!",
                 oneWord: "Adventurous",
-                photo: "",
+                photo: './arun-renu.jpg',
                 firstMeet: "When she decided to marry my roomie",
                 futureWish: "Cross country bike ride"
             },
@@ -409,9 +409,10 @@
         }
 
         function getImageForWish(wish) {
-            if (wish.email === "arun4xp@gmail.com" || wish.email === "renuthomas2412@gmail.com") {
-                return './arun-renu.jpg';;
+            if (wish.photo && wish.photo.trim() !== '') {
+                return wish.photo;
             }
+
             return placeholderImages[Math.floor(Math.random() * placeholderImages.length)];
         }
 
